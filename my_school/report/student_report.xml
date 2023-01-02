@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <report id="student" string="Student Pdf" model="studentm" name="my_school.student_template" file="studentReport" report_type="qweb-pdf" />
+
+</odoo>

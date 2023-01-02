@@ -1,0 +1,20 @@
+
+{
+    'name': 'My School',
+    'version': '1.0',
+    'website':"https://www.diracerp.com",
+    'image':[],
+    'depends': ["sale","hospital"],
+    'author':"inayat",
+    'description': "this is My School models",
+    'data': ["security/ir.model.access.csv",
+             "report/student_report.xml",
+             "view/student_view.xml",
+             "view/school_view.xml",
+             "view/student_report_view.xml",
+             "view/sale_view.xml",
+            ],
+    'installable': True,
+    'auto_install': False,
+    'active':False,
+}

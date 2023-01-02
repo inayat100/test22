@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="student_template" name="student_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <!-- <t t-call="web.external_layout"> -->
+                <div class="page">
+                    <table border="1">
+                        <img t-att-src="image_data_uri(o.image)" width="100"/>
+                        <tr>
+                            <th border="1" >
+                                    Name
+                                </th>
+                            <th border="1" >
+                                    City
+                                </th>
+                        </tr>
+                        <tr>
+                            <td border="1" >
+                                <span t-field="o.name"/>
+                            </td>
+                            <td border="1" >
+                                <span t-field="o.city"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td border="1" >
+                                <span t-field="o.name"/>
+                            </td>
+                            <td border="1" >
+                                <span t-field="o.city"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- </t> -->
+            </t>
+        </t>
+    </template>
+</odoo>

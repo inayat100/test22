@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="school_view_tree" model="ir.ui.view">
+        <field name="name">school.view.tree</field>
+        <field name="model">schoolm</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" />
+                <field name="code" />
+                <field name="booking_date" />
+            </tree>
+        </field>
+    </record>
+    <record id="school_view_form" model="ir.ui.view">
+        <field name="name">school.view.form</field>
+        <field name="model">schoolm</field>
+        <field name="arch" type="xml">
+            <form string="School Details">
+                <sheet>
+                    <group >
+                        <field name="name" />
+                        <field name="code" />
+                        <field name="booking_date" />
+                        <field name="student_id" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="school_view_calendar" model="ir.ui.view">
+        <field name="name">schoolm.view.calendar</field>
+        <field name="model">schoolm</field>
+        <field name="arch" type="xml">
+            <calendar string="Booking date" date_start="booking_date" color="student_id" mode="month" quick_add="False">
+                <field name="student_id"/>
+                <field name="name" />
+            </calendar>
+        </field>
+    </record>
+    
+    <record id="schoolm_action1" model="ir.actions.act_window">
+        <field name="name">School Name</field>
+        <field name="res_model">schoolm</field>
+        <field name="view_mode">tree,form,calendar</field>
+    </record>
+    
+    <menuitem id="school_menu1" parent="student_menu" name="School Datial"/>
+    <menuitem id="school_menu2" parent="school_menu1" action="schoolm_action1" name="School Datial"/>
+</odoo>
